@@ -46,7 +46,7 @@ The plugin provides both html ID and classes to help themers. We plan to allow e
 
 == Screenshots ==
 
-
+1. Soon to be available screenshot.
 
 == Changelog ==
 
@@ -61,6 +61,12 @@ The plugin provides both html ID and classes to help themers. We plan to allow e
 
 = 0.1 =
 * Initial commit.
+
+
+== Upgrade Notice ==
+
+= 1.0 =
+* Overwrite previous version of the plugin.
 
 
 == About Cartograf ==
