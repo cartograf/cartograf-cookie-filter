@@ -1,4 +1,5 @@
 === Cartograf Cookie filter ===
+
 Contributors: versvs, dmikam
 Donate link: http://example.com/
 Tags: cookie law, eu, european union, cookie control, spain, spanish cookie law
