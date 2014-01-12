@@ -3,7 +3,7 @@
 Plugin Name: Cartograf Cookie filter
 Plugin URI:
 Description: Previene la instalación de cookies previa al consentimiento informado de los visitantes
-Version: 1.0.2
+Version: 1.0.5
 Author: Jose Alcántara & Dima Kam / Cartograf
 Author URI: http://www.cartograf.net
 Author Email: info@cartograf.net
