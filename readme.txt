@@ -9,7 +9,7 @@ Stable tag: 1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Prevents the installation of tracking cookies with the informed consent of the visitor.
+Prevents the installation of tracking cookies without the informed consent of the visitor. Spanish Cookie law compliant.
 
 == Description ==
 
@@ -19,9 +19,7 @@ Note that this is important as one of the first countries to introduce this regu
 
 This plugin allows the user to insert code (typically, javascript code) in both header and footer and for two different cases (cookie accepted, cookie not accepted). It also provides HTML id and classes that enable easy customization.
 
-
-
-A few notes about the sections above:
+The development and manteniance of this plugin is sponsored by [Cartograf](http://www.cartograf.net)
 
 
 == Installation ==
