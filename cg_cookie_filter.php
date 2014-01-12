@@ -62,7 +62,7 @@ add_action('wp_footer','cg_cf_foot',999999+2);
 function cg_cf_enqueue_script() {
         if (!cg_cf_cookie_accepted()){
                 wp_enqueue_script( 'jquery' );
-                wp_enqueue_script( 'cg_cookie-filter', plugins_url('cg_cookie_filter').'/script.js',array('jquery') );
+                wp_enqueue_script( 'cg_cookie-filter', plugins_url('cartograf-cookie-filter').'/script.js',array('jquery') );
         }
 
 }
