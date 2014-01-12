@@ -109,7 +109,7 @@
 	}
 
 	function cg_cf_main_config_render($attr){
-                _e('Cartograf Cookie-filter plugin\'s configuration. <br />Remember, click on any link on the page will accept COOKIES automatically. To avoid it on some links add "<strong>no-cookie-accept</strong>" class to the tag.');
+                _e('Cartograf Cookie-filter plugin\'s configuration. <br />Remember, clicking on any link on the page will accept COOKIES automatically. To avoid it on some links add "<strong>no-cookie-accept</strong>" class to the desired link tag so the plugin can make an exception of them.');
 	}
 
 
