@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Cartograf Cookie filter
-Plugin URI:
+Plugin URI: http://www.cartograf.net/plugin-wordpress-cumplir-ley-de-cookies-espana
 Description: Previene la instalación de cookies previa al consentimiento informado de los visitantes
-Version: 1.0.5
+Version: 1.0.6
 Author: Jose Alcántara & Dima Kam / Cartograf
 Author URI: http://www.cartograf.net
 Author Email: info@cartograf.net
@@ -18,7 +18,7 @@ require_once('settings_page.php');
 register_activation_hook( __FILE__, 'cg_cf_activate' );
 function cg_cf_activate(){
 	if (get_option('cg_cf_accept_timeout')===FALSE){
-		update_option('cg_cf_text', 'Las cookies nos permiten ofrecer nuestros servicios. Al utilizar nuestros servicios, aceptas el uso que hacemos de las cookies.');
+		update_option('cg_cf_text', 'Las cookies nos permiten ofrecer nuestros servicios. Al utilizar nuestros servicios, aceptas el uso que hacemos de las cookies. <a href="">Aceptar</a>');
 		//~ update_option('cg_cf_head_accepted_code',       	'on');
 		//~ update_option('cg_cf_foot_accepted_code',       	'on');
 		//~ update_option('cg_cf_head_denied_code',       	'on');

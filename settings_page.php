@@ -52,26 +52,26 @@
 		);
 
 		add_settings_field('cg_cf_head_accepted_code',
-			'Code to insert in head on accept COOKIES (Analytics code)',
+			'Code to insert in head when the user has accepted cookies (Analytics code)',
 			'cg_cf_head_accepted_code',
 			'cg_cf_options_form',
 			'cg_cf_main_config'
 		);
 		add_settings_field('cg_cf_foot_accepted_code',
-			'Code to insert in foot on accept COOKIES (Analytics code)',
+			'Code to insert in foot when the user has accepted cookies (Analytics code)',
 			'cg_cf_foot_accepted_code',
 			'cg_cf_options_form',
 			'cg_cf_main_config'
 		);
 
 		add_settings_field('cg_cf_head_denied_code',
-			'Code to insert in head on deny',
+			'Code to insert in head when the user has not accepted cookies yet',
 			'cg_cf_head_denied_code',
 			'cg_cf_options_form',
 			'cg_cf_main_config'
 		);
 		add_settings_field('cg_cf_foot_denied_code',
-			'Code to insert in foot on deny',
+			'Code to insert in foot when the user has not accepted cookies yet',
 			'cg_cf_foot_denied_code',
 			'cg_cf_options_form',
 			'cg_cf_main_config'
@@ -109,7 +109,11 @@
 	}
 
 	function cg_cf_main_config_render($attr){
-                _e('Cartograf Cookie-filter plugin\'s configuration. <br />Remember, clicking on any link on the page will accept COOKIES automatically. To avoid it on some links add "<strong>no-cookie-accept</strong>" class to the desired link tag so the plugin can make an exception of them.');
+		echo '<div style="display: block; float: right; max-width: 20%; width: 350px; padding: 10px; position: fixed; right: 0; background: #fff; text-align: center;" class="options right"><img src="' . plugins_url('cartograf-cookie-filter') . '/logo-cartograf.png' . '" /><p>';
+		_e('The development of <a href="http://www.cartograf.net/plugin-wordpress-cumplir-ley-de-cookies-espana?utm_source=opcionesplugin&utm_medium=pluginwordpress&utm_campaign=cookiefilter">this plugin</a> is sponsored by <a target="_blank" href="http://www.cartograf.net/?utm_source=opcionesplugin&utm_medium=pluginwordpress&utm_campaign=cookiefilter">Cartograf</a>');
+		echo '</p></div>
+				<div class="options left">';
+		_e('Remember, clicking on any link on the page will ACCEPT cookies automatically. To avoid this behaviour on some links add "<strong>no-cookie-accept</strong>" class to any desired link tag so the plugin can make an exception of them.');
 	}
 
 
@@ -149,7 +153,7 @@
 		$timeout = cg_cf_get_timeout();
 		?>
 			<input type="number" name="cg_cf_accept_timeout" value="<?php echo $timeout?>" />
-                        <div class="tip"><?php _e('SECONDS TO WAIT before accept COOKIES automatically')?></div>
+                        <div class="tip"><?php _e('SECONDS TO WAIT before accept COOKIES automatically. Set to a very huge value to prevent cookie acceptance by letting the tab open.')?></div>
 		<?php
 	}
 
@@ -157,7 +161,7 @@
 		$scrollout = cg_cf_get_scrollout();
 		?>
 			<input type="number" name="cg_cf_accept_scrollout" value="<?php echo $scrollout?>" />
-                        <div class="tip"><?php _e('PIXELS TO SCROLL before accept COOKIES automatically')?></div>
+                        <div class="tip"><?php _e('PIXELS TO SCROLL before accept COOKIES automatically. Set to a very huge value to prevent cookie acceptance by scrolling.')?></div>
 		<?php
 	}
 
@@ -166,6 +170,9 @@
 		?>
 			<textarea name="cg_cf_exception_pages"><?php echo $exceptions?></textarea>
                         <div class="tip"><?php _e('Comma separated list of IDs, slugs or titles of pages or posts on which COOKIES won\'t be accepted on scroll or timeout')?></div>
-		<?php
+                        
+                        
+         </div>
+		<?php //this last div is needed to close the container
 	}
 ?>

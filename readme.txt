@@ -5,17 +5,19 @@ Donate link: http://www.versvs.net
 Tags: cookie law, eu, european union, cookie control, spain, spanish cookie law
 Requires at least: 3.6
 Tested up to: 3.8
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Prevents the installation of tracking cookies without the informed consent of the visitor. Spanish Cookie law compliant.
+Prevents the installation of tracking cookies without the informed consent of the visitor. This plugin was specifically designed to be Spanish Cookie law compliant, but it also comply with the requisites of UK (and other) cookie law.
 
 == Description ==
 
 This plugin allows site builders to comply with the spanish cookie law, that regulates the use of tracking cookies in websites according to the EU directive.
 
 Note that this is important as one of the first countries to introduce this regulation after the EU directive was emitted was UK. But the UK law has some differences with the spanish regarding "informed consent" of the visitor, thus cookies needs to be treated a bit differently.
+
+Despite of that, the plugin provide the functionality needed to comply with UK (and other) cookie law, as well.
 
 This plugin allows the user to insert code (typically, javascript code) in both header and footer and for two different cases (cookie accepted, cookie not accepted). It also provides HTML id and classes that enable easy customization.
 
@@ -47,6 +49,10 @@ The plugin provides both html ID and classes to help themers. We plan to allow e
 1. Soon to be available screenshot.
 
 == Changelog ==
+
+= 1.0.6 =
+* Improved tip texts on settings page.
+* We now explicitly support UK cookie law (the functionality was always there, just that we didn't mention).
 
 = 1.0 =
 * First stable release.
