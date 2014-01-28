@@ -45,7 +45,7 @@
 		);
 
 		add_settings_field('cg_cf_text',
-			'Text',
+			'Here you can introduce the message you want to show to your visitors to inform about cookie usage.',
 			'cg_cf_text',
 			'cg_cf_options_form',
 			'cg_cf_main_config'
@@ -113,7 +113,8 @@
 		_e('The development of <a href="http://www.cartograf.net/plugin-wordpress-cumplir-ley-de-cookies-espana?utm_source=opcionesplugin&utm_medium=pluginwordpress&utm_campaign=cookiefilter">this plugin</a> is sponsored by <a target="_blank" href="http://www.cartograf.net/?utm_source=opcionesplugin&utm_medium=pluginwordpress&utm_campaign=cookiefilter">Cartograf</a>');
 		echo '</p></div>
 				<div class="options left">';
-		_e('Remember, clicking on any link on the page will ACCEPT cookies automatically. To avoid this behaviour on some links add "<strong>no-cookie-accept</strong>" class to any desired link tag so the plugin can make an exception of them.');
+		_e('Remember, clicking on any link on the page will ACCEPT cookies automatically.<br />
+			To avoid this behaviour on some links add "<strong>no-cookie-accept</strong>" class to any desired link tag so the plugin can make an exception of them.');
 	}
 
 

@@ -4,8 +4,8 @@ Contributors: versvs
 Donate link: http://www.versvs.net
 Tags: cookie law, eu, european union, cookie control, spain, spanish cookie law
 Requires at least: 3.6
-Tested up to: 3.8
-Stable tag: 1.0.6
+Tested up to: 3.8.1
+Stable tag: 1.0.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,12 +43,20 @@ Yes, it is.
 
 The plugin provides both html ID and classes to help themers. We plan to allow easy color config in next versions.
 
+= How does this message behaves along with cache plugins? =
+
+If you are using a cache plugin, you are encouraged to flush/rebuild your cache whenever you change your welcome message.
+
 
 == Screenshots ==
 
 1. Soon to be available screenshot.
 
 == Changelog ==
+
+= 1.0.7 =
+* Added info about compatibility with cache plugins
+* Updated tip texts on settings page.
 
 = 1.0.6 =
 * Improved tip texts on settings page.
