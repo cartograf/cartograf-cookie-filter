@@ -1,8 +1,4 @@
 <?php
-function cg_cf_cookie_accepted(){
-    return !empty($_COOKIE['cg_cookie_accepted']);
-}
-
 function cg_cf_cookie_bar(){
     $text = get_option('cg_cf_text');
     ?>
@@ -22,11 +18,17 @@ function cg_cf_code_templates(){
         'to'    => array('/!*', '*!/',  '<!/script')
     );
 
-    echo '<script type="text/template" id="cg_cf_head_template">/*!* ';
+    echo '<script type="text/template" id="cg_cf_head_template_accepted">/*!* ';
         echo str_replace($replace['from'],$replace['to'],cg_cf_get_head_accepted());
     echo ' *!*/</script>';
-    echo '<script type="text/template" id="cg_cf_foot_template">/*!* ';
+    echo '<script type="text/template" id="cg_cf_head_template_denied">/*!* ';
+        echo str_replace($replace['from'],$replace['to'],cg_cf_get_head_denied());
+    echo ' *!*/</script>';
+    echo '<script type="text/template" id="cg_cf_foot_template_accepted">/*!* ';
         echo str_replace($replace['from'],$replace['to'],cg_cf_get_foot_accepted());
+    echo ' *!*/</script>';
+    echo '<script type="text/template" id="cg_cf_foot_template_denied">/*!* ';
+        echo str_replace($replace['from'],$replace['to'],cg_cf_get_foot_denied());
     echo ' *!*/</script>';
 }
 
@@ -35,17 +37,9 @@ function cg_cf_get_head_accepted(){
     return $code;
 }
 
-function cg_cf_head_accepted(){
-    echo cg_cf_get_head_accepted();
-}
-
 function cg_cf_get_head_denied(){
     $code = get_option('cg_cf_head_denied_code');
     return $code;
-}
-
-function cg_cf_head_denied(){
-    echo cg_cf_get_head_denied();
 }
 
 function cg_cf_get_foot_accepted(){
@@ -53,17 +47,9 @@ function cg_cf_get_foot_accepted(){
     return $code;
 }
 
-function cg_cf_foot_accepted(){
-    echo cg_cf_get_foot_accepted();
-}
-
 function cg_cf_get_foot_denied(){
     $code = get_option('cg_cf_foot_denied_code');
     return $code;
-}
-
-function cg_cf_foot_denied(){
-    echo cg_cf_get_foot_denied();
 }
 
 function cg_cf_get_timeout(){
