@@ -24,7 +24,10 @@ jQuery(document).ready(function (){
                 }
             });
         }
-    
+
+        insertTemplatesDenied();
+    } else {
+        cookies_accepted();
     }
 });
 
@@ -34,7 +37,7 @@ function cookies_accepted(){
         accept_cookies();
         hide_cookie_bar();
         jQuery('a').unbind('click',cookies_accepted);
-        insertTemplates();
+        insertTemplatesAccepted();
     }
 }
 
@@ -66,17 +69,26 @@ function setCookie(c_name,value,exdays){
 
 function needToCheckCookie(){
     var userDate = new Date();
-    timezone = -(userDate.getTimezoneOffset()/60);
+    var timezone = -(userDate.getTimezoneOffset()/60);
+    var cookie_preset = document.cookie.indexOf('cg_cookie_accepted=1') >= 0;
 
-    var result = timezone>=0 && timezone<=3;
+    var result = timezone>=0 && timezone<=3 && !cookie_preset;
 
     return result;
 }
 
-function insertTemplates(){
+function insertTemplatesAccepted(){
+    insertTemplates('accepted');
+}
+
+function insertTemplatesDenied(){
+    insertTemplates('denied');
+}
+
+function insertTemplates(sufix){
     var templates = [
-        'cg_cf_head_template',
-        'cg_cf_foot_template'
+        'cg_cf_head_template_' + sufix,
+        'cg_cf_foot_template_' + sufix
     ];
     for(var i=0; i < templates.length; i++){
         var code = jQuery('#'+templates[i]).html().replace('/*!*','').replace('*!*/','').replace('/!*','/*').replace('*!/','*/').replace('<!/script','</script');
