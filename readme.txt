@@ -5,7 +5,7 @@ Donate link: http://www.versvs.net
 Tags: cookie law, eu, european union, cookie control, spain, spanish cookie law
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.0.7
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,9 @@ If you are using a cache plugin, you are encouraged to flush/rebuild your cache 
 
 == Changelog ==
 
+= 1.1.0 =
+* Cookie checking is now implemented client-side, to make the plugin compatible with cache plugins. Thanks to Sergio Folgar (/sfolgar) for this contribution.
+
 = 1.0.7 =
 * Added info about compatibility with cache plugins
 * Updated tip texts on settings page.
@@ -79,6 +82,12 @@ If you are using a cache plugin, you are encouraged to flush/rebuild your cache 
 
 = 1.0 =
 * Overwrite previous version of the plugin.
+
+== Contributors ==
+
+* Jose Alcántara
+* Dima Kam
+* Sergio Folgar
 
 
 == About Cartograf ==

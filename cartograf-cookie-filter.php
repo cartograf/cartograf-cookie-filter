@@ -3,8 +3,8 @@
 Plugin Name: Cartograf Cookie filter
 Plugin URI: http://www.cartograf.net/plugin-wordpress-cumplir-ley-de-cookies-espana
 Description: Previene la instalación de cookies previa al consentimiento informado de los visitantes
-Version: 1.0.7
-Author: Jose Alcántara & Dima Kam / Cartograf
+Version: 1.1.0
+Author: Cartograf
 Author URI: http://www.cartograf.net
 Author Email: info@cartograf.net
 */
