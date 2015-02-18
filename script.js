@@ -86,12 +86,11 @@ function insertTemplatesDenied(){
 }
 
 function insertTemplates(sufix){
-    var templates = [
-        'cg_cf_head_template_' + sufix,
-        'cg_cf_foot_template_' + sufix
-    ];
-    for(var i=0; i < templates.length; i++){
-        var code = jQuery('#'+templates[i]).html().replace('/*!*','').replace('*!*/','').replace('/!*','/*').replace('*!/','*/').replace('<!/script','</script');
-        jQuery('body').append(code);
-    }
+	jQuery('head').append(parseTemplate('cg_cf_head_template_' + sufix));
+	jQuery('body').append(parseTemplate('cg_cf_foot_template_' + sufix));
+}
+
+function parseTemplate(template){
+	var code = jQuery('#'+template).html().replace('/*!*','').replace('*!*/','').replace('/!*','/*').replace('*!/','*/').replace('<!/script','</script');
+	return code;
 }
